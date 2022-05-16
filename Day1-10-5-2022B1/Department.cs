@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SE1422;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Day1_10_5_2022
 {
-    internal class Department:IDisplayable
+    public class Department : IDisplayable
     {
         List<Account> accounts;
         //public string DepartmentName { get; set; }
@@ -16,10 +17,12 @@ namespace Day1_10_5_2022
         }
         public string DepartmentName { get; set; }
         public int GetNumberOfAccount() { return accounts.Count; }
-        public void AddAccount(Account c) {
+        public void AddAccount(Account c)
+        {
             if (accounts.Contains(c)) { Console.WriteLine("Account already exists"); return; } else { accounts.Add(c); Console.WriteLine($"Add account {c.Username} successfully"); }
         }
-        public void RemoveAccount(Account c) {
+        public void RemoveAccount(Account c)
+        {
             if (accounts == null)
             {
                 Console.WriteLine("List account is null"); return;
@@ -28,45 +31,78 @@ namespace Day1_10_5_2022
             {
                 if (accounts.Contains(c)) { accounts.Remove(c); Console.WriteLine("Account has been remove"); } else { Console.WriteLine("Account does not exits"); return; }
             }
-           
+
         }
 
         public string InputString(string message, string error)
         {
-            while (true) {
+            while (true)
+            {
                 Console.Write(message);
                 string inputString = Console.ReadLine();
                 if (!string.IsNullOrEmpty(inputString)) return inputString;
                 Console.WriteLine(error);
             }
-            
+
         }
-        public void Input() {
+        public void Input()
+        {
             DepartmentName = InputString("Enter Department Name:", "Department name is not null. Enter again");
-            while (true)
-            {
-                Account account = new Account(InputString("Enter Username: ", "Username is not null"), InputString("Enter Password: ", "Password is not null"));
-                AddAccount(account);
-                if (InputString("Do you want continue add (Y/n): ", "Not empty. Enter again").ToLower().Equals("n")) return;
-            }
+                while (true)
+                {
+                    Console.WriteLine("1.Add Employee");
+                    Console.WriteLine("2.Add Customer");
+                    string number = Console.ReadLine();
+                    try
+                    {
+                        int num = Convert.ToInt32(number);
+                        if (num >= 1 && num <= 2)
+                        {
+                            if(num == 1)
+                            {
+                                Employee e = new Employee();
+                                e.Input();
+                                AddAccount(e);
+                            }
+                            if(num == 2)
+                            {
+                                Customer e = new Customer();
+                                e.Input();
+                                AddAccount(e);
+                            }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Choice must in [1-2]: ");
+                    }
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Choice must is number");
+                    }
+                    if (InputString("Do you want continue add (Y/n): ", "Not empty. Enter again").ToLower().Equals("n")) return;
+                }
         }
-        public void Sort() { 
+        public void Sort()
+        {
             accounts.Sort(new UsernameCompare());
         }
-        public void SortByType() { }
-        
-
+        public void SortByType()
+        {
+            accounts.Sort(new DataTypeCompare());
+        }
         public void Display()
         {
             Console.WriteLine($"List Accounts in Department : {DepartmentName}");
-            Console.WriteLine($"{"No",5}{"Username",15}{"Password",15}");
+            //Console.WriteLine($"{"No",5}{"Username",15}{"Password",15}");
             for (int i = 0; i < accounts.Count; i++)
             {
-                Console.WriteLine($"{i + 1,5}{accounts[i].Username,15}{accounts[i].Password,15}");
+                //Console.WriteLine($"{i + 1,5}{accounts[i].Username,15}{accounts[i].Password,15}");
+                Console.WriteLine(accounts[i]);
             }
 
         }
-        
+
         public int Menu()
         {
             Console.WriteLine("1.Get number of account");
@@ -83,13 +119,15 @@ namespace Day1_10_5_2022
                 try
                 {
                     int num = Convert.ToInt32(number);
-                    if(num >=1 && num <= 7)
+                    if (num >= 1 && num <= 7)
                     {
                         return num;
                     }
                     Console.WriteLine("Choice must in [1-7]: ");
 
-                }catch {
+                }
+                catch
+                {
                     Console.WriteLine("Choice must is number");
                 }
             }

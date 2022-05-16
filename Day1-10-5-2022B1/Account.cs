@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace SE1422
 {
-    class Account
+    public class Account
     {
         protected string username;
         public string Username
@@ -27,28 +28,43 @@ namespace SE1422
             this.password = password;
         }
 
-        public void Input()
+        public virtual void Input()
         {
-            Console.WriteLine("Username: ");
+            Console.Write("Username: ");
             username = Console.ReadLine().Trim();
-            Console.WriteLine("Password: ");
+            Console.Write("Password: ");
             password = Console.ReadLine().Trim();
         }
 
         public override bool Equals(object obj)
         {
             return obj is Account account &&
-                   username == account.username &&
-                   password == account.password;
+                   Username == account.Username;
         }
+
         public override int GetHashCode()
         {
-            return HashCode.Combine(username, password);
+            return HashCode.Combine(Username);
         }
 
         public override string ToString()
         {
             return $"Account: {username} - {password}";
+        }
+
+    }
+    class UsernameCompare : IComparer<Account>
+    {
+        public int Compare(Account x, Account y)
+        {
+            return x.Username.CompareTo(y.Username);
+        }
+    }
+    class DataTypeCompare : IComparer<Account>
+    {
+        public int Compare(Account x, Account y)
+        {
+            return x.GetType().Name.CompareTo(y.GetType().Name);
         }
     }
 }

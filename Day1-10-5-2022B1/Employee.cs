@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SE1422
 {
-    internal class Employee : Account
+    public class Employee : Account
     {
         public string Role { get; set; }
         public double Salary { get; set; }
@@ -21,16 +21,16 @@ namespace SE1422
         {
         }
 
-        public new void Input()
+        public override void Input()
         {
             base.Input();
-            Console.WriteLine("Role: ");
+            Console.Write("Role: ");
             Role = Console.ReadLine().Trim();
             while (true)
             {
                 try
                 {
-                    Console.WriteLine("Salary: ");
+                    Console.Write("Salary: ");
                     Salary = Double.Parse(Console.ReadLine().Trim());
                     break;
                 }

@@ -21,16 +21,16 @@ namespace SE1422
         public DateTime DOB { get; set; }
         public string Name { get; set; }
 
-        public new void Input()
+        public override void Input()
         {
             base.Input();
-            Console.WriteLine("Name: ");
+            Console.Write("Name: ");
             Name = Console.ReadLine().Trim();
             while (true)
             {
                 try
                 {
-                    Console.WriteLine("Date of birth: ");
+                    Console.Write("Date of birth: ");
                     DOB = DateTime.Parse(Console.ReadLine().Trim());
                     break;
                 }
