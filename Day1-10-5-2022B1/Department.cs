@@ -88,7 +88,7 @@ namespace Day1_10_5_2022
                 if (InputString("Do you want continue add (Y/n): ", "Not empty. Enter again").ToLower().Equals("n")) return;
             }
         }
-        public void Sort()
+        public void Sort(object sortByUsername)
         {
             accounts.Sort(new UsernameCompare());
         }
@@ -191,12 +191,13 @@ namespace Day1_10_5_2022
             try
             {
            
-                StreamWriter writer = new StreamWriter(FileName);
+                StreamWriter writer = new StreamWriter(FileName, append: true);
                 writer.WriteLine($"Department : {DepartmentName}");
                 foreach (Account account in accounts)
                 {
                     writer.WriteLine(account.ToString());
                 }
+                Console.WriteLine($"Write {accounts.Count()} account to {DepartmentName}");
                 writer.Close();
             }
             catch (Exception e)
@@ -205,7 +206,36 @@ namespace Day1_10_5_2022
             }
 
         }
+        public static int SortByUsername(Account x, Account y)
+        {
+            if (x == null)
+            {
+                if (y == null) { return 0; } else { return -1; }
+                
+            }
+            else
+            {
+                if (y == null) { return 1; }
+                else
+                {
+                    int temp = x.Username.CompareTo(y.Username);
+                    if (temp != 0)
+                    {
+                        return temp;
+                    }
+                    else
+                    {
+                        return 0;
+                    }
+                }
+            }
+        }
 
+        public void SortUsingDelegate()
+        {
+            accounts.Sort(SortByUsername);
+
+        }
         public int Menu()
         {
             Console.WriteLine("1.Get number of account");

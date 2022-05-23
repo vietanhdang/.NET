@@ -12,11 +12,13 @@ namespace Day1_10_5_2022B1
 {
     internal class Program
     {
+
         static void Main(string[] args)
         {
 
             Department department = new Department();
             department.ReadFromFile(@"D:\Semester 5\PRN211\Day1-10-5-2022\Day1-10-5-2022B1\department.txt");
+            department.SortUsingDelegate();
             department.Display();
             department.WriteFromFile(@"D:\Semester 5\PRN211\Day1-10-5-2022\Day1-10-5-2022B1\departmentOut.txt");
             //department.DepartmentName = "IT";
@@ -29,7 +31,7 @@ namespace Day1_10_5_2022B1
             //writer.WriteLine($"Department: { department.DepartmentName}");
             //writer.Close();
 
-            department.Sort();
+
 
 
 
