@@ -43,7 +43,8 @@ namespace SE1422
 
         public override string ToString()
         {
-            return $"Employee: {base.ToString()} - {Salary} - {Role}";
+            //return $"Employee: {base.ToString()} - {Salary} - {Role}";
+            return $"Employee|{Username}|{Password}|{Salary}|{Role}";
         }
     }
 }

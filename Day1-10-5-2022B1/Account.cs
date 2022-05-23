@@ -49,7 +49,8 @@ namespace SE1422
 
         public override string ToString()
         {
-            return $"Account: {username} - {password}";
+            //return $"Account: {username} - {password}";
+            return $"Account|{username}|{password}";
         }
 
     }

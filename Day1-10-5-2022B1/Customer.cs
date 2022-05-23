@@ -43,7 +43,8 @@ namespace SE1422
 
         public override string ToString()
         {
-            return $"Customer: {base.ToString()} - {Name} - {DOB}";
+            //return $"Customer: {base.ToString()} - {Name} - {DOB}";
+            return $"Customer|{Username}|{Password}|{Name}|{Convert.ToDateTime(DOB):dd MMM yyyy}";
         }
     }
 }
