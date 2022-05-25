@@ -9,7 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoCollections", "DemoColl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoReadWrite", "DemoReadWrite\DemoReadWrite.csproj", "{F97A56AB-B316-48CD-ABD1-734A018AE858}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoDelegate_Lambda", "DemoDelegate\DemoDelegate_Lambda.csproj", "{A9DDC39A-E081-438F-8D40-3E887921654E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoDelegate_Lambda", "DemoDelegate\DemoDelegate_Lambda.csproj", "{A9DDC39A-E081-438F-8D40-3E887921654E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoExtensionMethod_LinQ", "DemoExtensionMethod_LinQ\DemoExtensionMethod_LinQ.csproj", "{88016770-E6FC-445F-801A-C9AC81D9B657}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LAB1", "LAB1\LAB1.csproj", "{6785B3A9-68CA-4EF8-954A-C3A9B7854F33}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{A9DDC39A-E081-438F-8D40-3E887921654E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9DDC39A-E081-438F-8D40-3E887921654E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9DDC39A-E081-438F-8D40-3E887921654E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88016770-E6FC-445F-801A-C9AC81D9B657}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88016770-E6FC-445F-801A-C9AC81D9B657}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88016770-E6FC-445F-801A-C9AC81D9B657}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88016770-E6FC-445F-801A-C9AC81D9B657}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6785B3A9-68CA-4EF8-954A-C3A9B7854F33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6785B3A9-68CA-4EF8-954A-C3A9B7854F33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6785B3A9-68CA-4EF8-954A-C3A9B7854F33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6785B3A9-68CA-4EF8-954A-C3A9B7854F33}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

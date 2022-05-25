@@ -110,7 +110,7 @@ namespace Day1_10_5_2022
         }
         public void ReadFromFile(String FileName)
         {
-            
+
             try
             {
                 StreamReader reader = new StreamReader(FileName);
@@ -128,21 +128,21 @@ namespace Day1_10_5_2022
                 while ((line = reader.ReadLine()) != null)
                 {
                     String[] temp = line.Trim().Split("|");
-                    if (temp.Length == 3 && string.Equals(temp[0].Trim(), "account", StringComparison.OrdinalIgnoreCase))
+                    if (temp.Length == 3 && temp[0].Trim().Equals("account", StringComparison.OrdinalIgnoreCase))
                     {
                         try
                         {
                             Account account = new Account();
                             account.Username = temp[1].Trim();
                             account.Password = temp[2].Trim();
-                           AddAccount(account);
+                            AddAccount(account);
                         }
                         catch (ArgumentException e)
                         {
                             Console.WriteLine($"{temp[1].Trim()} error row");
                         }
                     }
-                    if (temp.Length == 5 && string.Equals(temp[0].Trim(), "employee", StringComparison.OrdinalIgnoreCase))
+                    if (temp.Length == 5 && temp[0].Trim().Equals("employee", StringComparison.OrdinalIgnoreCase))
                     {
                         try
                         {
@@ -158,7 +158,7 @@ namespace Day1_10_5_2022
                             Console.WriteLine($"{temp[1].Trim()} error parse salary");
                         }
                     }
-                    if (temp.Length == 5 && string.Equals(temp[0].Trim(), "customer", StringComparison.OrdinalIgnoreCase))
+                    if (temp.Length == 5 && temp[0].Trim().Equals("customer", StringComparison.OrdinalIgnoreCase))
                     {
                         try
                         {
@@ -167,7 +167,7 @@ namespace Day1_10_5_2022
                             customer.Password = temp[2].Trim();
                             customer.Name = temp[3].Trim();
                             customer.DOB = DateTime.ParseExact(temp[4], "dd MMM yyyy", null);
-                           AddAccount(customer);
+                            AddAccount(customer);
                         }
                         catch (FormatException e)
                         {
@@ -190,7 +190,7 @@ namespace Day1_10_5_2022
         {
             try
             {
-           
+
                 StreamWriter writer = new StreamWriter(FileName, append: true);
                 writer.WriteLine($"Department : {DepartmentName}");
                 foreach (Account account in accounts)
@@ -208,32 +208,12 @@ namespace Day1_10_5_2022
         }
         public static int SortByUsername(Account x, Account y)
         {
-            if (x == null)
-            {
-                if (y == null) { return 0; } else { return -1; }
-                
-            }
-            else
-            {
-                if (y == null) { return 1; }
-                else
-                {
-                    int temp = x.Username.CompareTo(y.Username);
-                    if (temp != 0)
-                    {
-                        return temp;
-                    }
-                    else
-                    {
-                        return 0;
-                    }
-                }
-            }
+            return x.Username.CompareTo(y.Username);
         }
 
         public void SortUsingDelegate()
         {
-            accounts.Sort(SortByUsername);
+           accounts.Sort((a,b) => a.Username.CompareTo(b.Username));
 
         }
         public int Menu()
