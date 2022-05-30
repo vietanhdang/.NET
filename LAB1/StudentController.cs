@@ -72,15 +72,15 @@ namespace LAB1
             //    throw new ArgumentException($"Student ID: {student.Id} already exists");
             //}
         }
-        public void DisplayAllStudent()
+        public List<Student> getAllStudent()
         {
-            Console.WriteLine("List of student: ");
-            students.ForEach(s => Console.WriteLine(s));
+            return students;
         }
         // find student by id
         public Student FindStudentById(int id)
         {
             return students.FirstOrDefault(s => s.Id == id);
+            //return students.Select(s => s).Where(s => s.Id == id).FirstOrDefault();
         }
         // find list of students by name
         public List<Student> FindStudentsByName(string name)

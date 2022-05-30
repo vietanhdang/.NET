@@ -51,5 +51,10 @@ namespace LAB1
             return obj is Student student &&
                    Id == student.Id;
         }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Id);
+        }
     }
 }

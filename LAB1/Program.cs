@@ -22,7 +22,15 @@ namespace LAB1
                 {
                     case 1:
                         int id = InputReader.ReadInt("Enter id: ");
-                        Console.WriteLine(studentController.FindStudentById(id));
+                        Student student = studentController.FindStudentById(id);
+                        if (student == null)
+                        {
+                            Console.WriteLine("Student not found");
+                        }
+                        else
+                        {
+                            Console.WriteLine(student);
+                        }
                         break;
                     case 2:
                         String name = InputReader.ReadString("Enter name: ");
@@ -56,7 +64,7 @@ namespace LAB1
                         studentController.FindStudentsHasSchollarship(min, max).Display();
                         break;
                     case 9:
-                        studentController.DisplayAllStudent();
+                        studentController.getAllStudent().Display();
                         break;
                     case 10:
                         return;

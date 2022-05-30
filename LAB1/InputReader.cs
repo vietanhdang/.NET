@@ -10,9 +10,14 @@ namespace LAB1
     {
         static public void Display(this List<Student> s)
         {
+            if (s.Count == 0)
+            {
+                Console.WriteLine("No students in the list");
+                return;
+            }
             s.ForEach(x => Console.WriteLine(x));
         }
-        public static int ReadInt(string prompt)
+        static public int ReadInt(string prompt)
         {
             Console.Write(prompt);
             string input = Console.ReadLine();
@@ -25,13 +30,13 @@ namespace LAB1
             }
             return result;
         }
-        public static String ReadString(string prompt)
+        static public String ReadString(string prompt)
         {
             Console.Write(prompt);
             string input = Console.ReadLine();
             return input;
         }
-        public static DateTime ReadDate(string prompt)
+        static public DateTime ReadDate(string prompt)
         {
             Console.Write(prompt);
             string input = Console.ReadLine();
@@ -44,7 +49,7 @@ namespace LAB1
             }
             return result;
         }
-        public static float ReadFloat(string prompt)
+       static public float ReadFloat(string prompt)
         {
             Console.Write(prompt);
             string input = Console.ReadLine();
@@ -58,7 +63,7 @@ namespace LAB1
             return result;
         }
 
-        public static float ReadFloatInRange(string prompt, float min, float max)
+        static public float ReadFloatInRange(string prompt, float min, float max)
         {
             Console.Write(prompt);
             string input = Console.ReadLine();
