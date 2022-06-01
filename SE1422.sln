@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoDelegate_Lambda", "Demo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoExtensionMethod_LinQ", "DemoExtensionMethod_LinQ\DemoExtensionMethod_LinQ.csproj", "{88016770-E6FC-445F-801A-C9AC81D9B657}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LAB1", "LAB1\LAB1.csproj", "{6785B3A9-68CA-4EF8-954A-C3A9B7854F33}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LAB1", "LAB1\LAB1.csproj", "{6785B3A9-68CA-4EF8-954A-C3A9B7854F33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstWindowForm", "FirstWindowForm\FirstWindowForm.csproj", "{C0B33ED6-9863-42D0-B379-91B1ED5FA078}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{6785B3A9-68CA-4EF8-954A-C3A9B7854F33}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6785B3A9-68CA-4EF8-954A-C3A9B7854F33}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6785B3A9-68CA-4EF8-954A-C3A9B7854F33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0B33ED6-9863-42D0-B379-91B1ED5FA078}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0B33ED6-9863-42D0-B379-91B1ED5FA078}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0B33ED6-9863-42D0-B379-91B1ED5FA078}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0B33ED6-9863-42D0-B379-91B1ED5FA078}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
