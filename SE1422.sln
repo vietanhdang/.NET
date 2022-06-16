@@ -15,7 +15,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoExtensionMethod_LinQ", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LAB1", "LAB1\LAB1.csproj", "{6785B3A9-68CA-4EF8-954A-C3A9B7854F33}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstWindowForm", "FirstWindowForm\FirstWindowForm.csproj", "{C0B33ED6-9863-42D0-B379-91B1ED5FA078}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FirstWindowForm", "FirstWindowForm\FirstWindowForm.csproj", "{C0B33ED6-9863-42D0-B379-91B1ED5FA078}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Notepad", "Notepad\Notepad.csproj", "{138DE9CE-870F-4E3B-8C43-40B75DD0C37D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudentManagement", "StudentManagement\StudentManagement.csproj", "{4D1B2D09-5068-43F8-BAF9-DF9AED8A2FCB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LAB2", "LAB2\LAB2.csproj", "{ED9F5E3E-881C-4E3C-818B-7FC9D03F1DAC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +57,18 @@ Global
 		{C0B33ED6-9863-42D0-B379-91B1ED5FA078}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0B33ED6-9863-42D0-B379-91B1ED5FA078}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0B33ED6-9863-42D0-B379-91B1ED5FA078}.Release|Any CPU.Build.0 = Release|Any CPU
+		{138DE9CE-870F-4E3B-8C43-40B75DD0C37D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{138DE9CE-870F-4E3B-8C43-40B75DD0C37D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{138DE9CE-870F-4E3B-8C43-40B75DD0C37D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{138DE9CE-870F-4E3B-8C43-40B75DD0C37D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D1B2D09-5068-43F8-BAF9-DF9AED8A2FCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D1B2D09-5068-43F8-BAF9-DF9AED8A2FCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D1B2D09-5068-43F8-BAF9-DF9AED8A2FCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D1B2D09-5068-43F8-BAF9-DF9AED8A2FCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED9F5E3E-881C-4E3C-818B-7FC9D03F1DAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED9F5E3E-881C-4E3C-818B-7FC9D03F1DAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED9F5E3E-881C-4E3C-818B-7FC9D03F1DAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED9F5E3E-881C-4E3C-818B-7FC9D03F1DAC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

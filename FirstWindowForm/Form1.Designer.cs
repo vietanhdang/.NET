@@ -54,10 +54,11 @@ namespace FirstWindowForm
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1130, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(202, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -66,7 +67,7 @@ namespace FirstWindowForm
             this.ButtonDelete.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ButtonDelete.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ButtonDelete.Image = ((System.Drawing.Image)(resources.GetObject("ButtonDelete.Image")));
-            this.ButtonDelete.Location = new System.Drawing.Point(985, 37);
+            this.ButtonDelete.Location = new System.Drawing.Point(983, 37);
             this.ButtonDelete.Name = "ButtonDelete";
             this.ButtonDelete.Size = new System.Drawing.Size(135, 95);
             this.ButtonDelete.TabIndex = 1;
@@ -75,6 +76,7 @@ namespace FirstWindowForm
             // 
             // Button9
             // 
+            this.Button9.AutoSize = true;
             this.Button9.Font = new System.Drawing.Font("Segoe Fluent Icons", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Button9.Location = new System.Drawing.Point(985, 138);
             this.Button9.Name = "Button9";
@@ -86,6 +88,7 @@ namespace FirstWindowForm
             // 
             // Button6
             // 
+            this.Button6.AutoSize = true;
             this.Button6.Font = new System.Drawing.Font("Segoe Fluent Icons", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Button6.Location = new System.Drawing.Point(985, 239);
             this.Button6.Name = "Button6";
@@ -97,6 +100,7 @@ namespace FirstWindowForm
             // 
             // Button3
             // 
+            this.Button3.AutoSize = true;
             this.Button3.Font = new System.Drawing.Font("Segoe Fluent Icons", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Button3.Location = new System.Drawing.Point(985, 340);
             this.Button3.Name = "Button3";
@@ -108,6 +112,7 @@ namespace FirstWindowForm
             // 
             // ButtonDot
             // 
+            this.ButtonDot.AutoSize = true;
             this.ButtonDot.Font = new System.Drawing.Font("Segoe Fluent Icons", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ButtonDot.Location = new System.Drawing.Point(985, 441);
             this.ButtonDot.Name = "ButtonDot";
@@ -119,6 +124,7 @@ namespace FirstWindowForm
             // 
             // Button0
             // 
+            this.Button0.AutoSize = true;
             this.Button0.Font = new System.Drawing.Font("Segoe Fluent Icons", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Button0.Location = new System.Drawing.Point(844, 441);
             this.Button0.Name = "Button0";
@@ -130,6 +136,7 @@ namespace FirstWindowForm
             // 
             // Button2
             // 
+            this.Button2.AutoSize = true;
             this.Button2.Font = new System.Drawing.Font("Segoe Fluent Icons", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Button2.Location = new System.Drawing.Point(844, 340);
             this.Button2.Name = "Button2";
@@ -141,6 +148,7 @@ namespace FirstWindowForm
             // 
             // Button5
             // 
+            this.Button5.AutoSize = true;
             this.Button5.Font = new System.Drawing.Font("Segoe Fluent Icons", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Button5.Location = new System.Drawing.Point(844, 239);
             this.Button5.Name = "Button5";
@@ -152,6 +160,7 @@ namespace FirstWindowForm
             // 
             // Button8
             // 
+            this.Button8.AutoSize = true;
             this.Button8.Font = new System.Drawing.Font("Segoe Fluent Icons", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Button8.Location = new System.Drawing.Point(844, 138);
             this.Button8.Name = "Button8";
@@ -163,6 +172,7 @@ namespace FirstWindowForm
             // 
             // ButtonCE
             // 
+            this.ButtonCE.AutoSize = true;
             this.ButtonCE.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ButtonCE.Font = new System.Drawing.Font("Segoe Fluent Icons", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ButtonCE.Location = new System.Drawing.Point(844, 37);
@@ -175,6 +185,7 @@ namespace FirstWindowForm
             // 
             // Button1
             // 
+            this.Button1.AutoSize = true;
             this.Button1.Font = new System.Drawing.Font("Segoe Fluent Icons", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Button1.Location = new System.Drawing.Point(703, 340);
             this.Button1.Name = "Button1";
@@ -186,6 +197,7 @@ namespace FirstWindowForm
             // 
             // Button4
             // 
+            this.Button4.AutoSize = true;
             this.Button4.Font = new System.Drawing.Font("Segoe Fluent Icons", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Button4.Location = new System.Drawing.Point(703, 239);
             this.Button4.Name = "Button4";
@@ -197,6 +209,7 @@ namespace FirstWindowForm
             // 
             // Button7
             // 
+            this.Button7.AutoSize = true;
             this.Button7.Font = new System.Drawing.Font("Segoe Fluent Icons", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Button7.Location = new System.Drawing.Point(703, 138);
             this.Button7.Name = "Button7";
@@ -254,6 +267,7 @@ namespace FirstWindowForm
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(151, 28);
             this.comboBox1.TabIndex = 20;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
             // 
             // Form1
             // 

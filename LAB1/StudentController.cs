@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LAB1
 {
-    internal class StudentController
+    public class StudentController
     {
         List<Student> students;
 

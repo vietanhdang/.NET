@@ -28,7 +28,7 @@ namespace FirstWindowForm
         {
             InitializeComponent();
             comboBox1.DataSource = list;
-            comboBox2.DataSource = list;
+            comboBox2.DataSource = list.Select(p => p).ToList();
 
         }
 
@@ -51,7 +51,7 @@ namespace FirstWindowForm
             String buttonName = ((Button)sender).Name;
             String buttonValue = ((Button)sender).Text;
             String textBox1 = TextBox1.Text;
-            if (textBox1.Equals("0") && TextBox1 != null && !buttonValue.Equals(".") && !buttonValue.Equals("CE") && !buttonName.Equals("ButtonDelete"))
+            if (textBox1.Equals("0") && !buttonValue.Equals(".") && !buttonValue.Equals("CE") && !buttonName.Equals("ButtonDelete"))
             {
                 TextBox1.Text = buttonValue;
             }
@@ -86,7 +86,7 @@ namespace FirstWindowForm
                 }
             }
         }
-        
+
 
         private void TextBox2_TextChanged(object sender, EventArgs e)
         {
@@ -97,6 +97,12 @@ namespace FirstWindowForm
         {
             ComboItem co = ((ComboItem)comboBox1.SelectedItem);
             String textBox1 = TextBox1.Text;
+            MessageBox.Show(textBox1);
+
+        }
+
+        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
 
         }
     }
