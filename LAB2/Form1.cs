@@ -1,4 +1,5 @@
-﻿using LAB2.Logics;
+﻿using LAB2.DataAccess;
+using LAB2.Logics;
 using LAB2.Models;
 using System;
 using System.Collections.Generic;
@@ -71,6 +72,10 @@ namespace LAB2
             {
                 throw new Exception("Id của sinh viên không hợp lệ (XX151359)");
             }
+            if (StudentDAO.CheckStudentExit(student.Id) != 0)
+            {
+                throw new Exception("Sinh viên đã tồn tại");
+            }
             student.Id = idBox.Text;
             if (String.IsNullOrEmpty(nameBox.Text))
             {
@@ -91,19 +96,16 @@ namespace LAB2
             dataGridView1.DataSource = StudentManager.GetAllStudents();
             // find columns in dataGridView1 checked
             List<Major> majors = StudentManager.getAllMajors();
-            majors.Insert(0, new Major("all", "All"));
+            majors.Insert(0, new Major("all", "Tất cả"));
             majorBox.DataSource = majors;
-            majors.RemoveAt(0);
-            List<Major> majors1 = new List<Major>();
-            majors1.AddRange(majors);
-            majorBox1.DataSource = majors1;
+            majorBox1.DataSource = StudentManager.getAllMajors();
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            try
+            // check id box enabled or not
+            if (idBox.Enabled)
             {
-                // check id box enabled or not
-                if (idBox.Enabled)
+                try
                 {
                     Student student = GetStudentFromFields();
                     if (StudentManager.InsertStudent(student) != 0)
@@ -116,37 +118,29 @@ namespace LAB2
                     {
                         MessageBox.Show("Thêm sinh viên thất bại");
                     }
-                    //if (StudentManager.CheckStudentIsExit(student.Id) == 0)
-                    //{
-
-                    //}
-                    //else
-                    //{
-                    //    MessageBox.Show("Mã sinh viên đã tồn tại");
-                    //}
                 }
-                else
+                catch (Exception err)
                 {
-                    MessageBox.Show($"Bạn đang sử dụng chức năng sửa thông tin sinh viên {Environment.NewLine}Vui lòng nhấn reset để thực hiện chức năng thêm mới");
+                    MessageBox.Show(err.Message);
                 }
             }
-            catch (Exception err)
+            else
             {
-                MessageBox.Show(err.Message);
+                MessageBox.Show($"Bạn đang sử dụng chức năng sửa thông tin sinh viên {Environment.NewLine}Vui lòng nhấn reset để thực hiện chức năng thêm mới");
             }
         }
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Please select a row to delete");
+                MessageBox.Show("Vui lòng chọn sinh viên cần xóa");
                 return;
             }
             else
             {
                 String id = dataGridView1.SelectedRows[0].Cells["Id"].Value.ToString();
                 // show confirm dialog
-                DialogResult result = MessageBox.Show("Are you sure to delete this student?", "Confirm", MessageBoxButtons.YesNo);
+                DialogResult result = MessageBox.Show("Bạn có muốn xóa sinh viên này?", "Xác nhận", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                 {
                     if (StudentManager.DeleteStudent(id) > 0)
@@ -165,24 +159,32 @@ namespace LAB2
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            try
+            if (idBox.Enabled)
             {
-                // check id box enabled or not
-                Student student = GetStudentFromFields();
-                if (StudentManager.UpdateStudent(student) != 0)
+                MessageBox.Show($"Vui lòng chọn một sinh viên để update");
+            }
+            else
+            {
+                try
                 {
-                    MessageBox.Show("Cập nhật thành công");
-                    dataGridView1.DataSource = StudentManager.GetAllStudents();
+                    // check id box enabled or not
+                    Student student = GetStudentFromFields();
+                    if (StudentManager.UpdateStudent(student) != 0)
+                    {
+                        MessageBox.Show("Cập nhật thành công");
+                        dataGridView1.DataSource = StudentManager.GetAllStudents();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cập nhật thất bại");
+                    }
                 }
-                else
+                catch (Exception err)
                 {
-                    MessageBox.Show("Cập nhật thất bại");
+                    MessageBox.Show(err.Message);
                 }
             }
-            catch (Exception err)
-            {
-                MessageBox.Show(err.Message);
-            }
+
         }
     }
 }

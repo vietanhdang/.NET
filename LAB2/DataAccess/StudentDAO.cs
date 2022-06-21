@@ -16,7 +16,7 @@ namespace LAB2.DataAccess
             List<Student> students = new List<Student>();
             foreach (DataRow row in dt.Rows)
             {
-                Student student = new Student(
+                students.Add(new Student(
                 row["Id"].ToString(),
                 row["Name"].ToString(),
                 Convert.ToBoolean(row["Gender"]),
@@ -24,8 +24,7 @@ namespace LAB2.DataAccess
                 (new Major(row["Major"].ToString(), row["Title"].ToString())),
                 Convert.ToBoolean(row["Active"]),
                 Convert.ToDouble(row["Scholarship"])
-                );
-                students.Add(student);
+                ));
             }
             return students;
         }
@@ -34,10 +33,10 @@ namespace LAB2.DataAccess
             List<Major> majors = new List<Major>();
             foreach (DataRow row in dt.Rows)
             {
-                Major major = new Major();
-                major.Code = row["Code"].ToString();
-                major.Title = row["Title"].ToString();
-                majors.Add(major);
+                majors.Add(new Major(
+                row["Code"].ToString(),
+                row["Title"].ToString()
+                ));
             }
             return majors;
         }
@@ -109,7 +108,7 @@ namespace LAB2.DataAccess
             SqlParameter[] parameter = new SqlParameter[1];
             parameter[0] = new SqlParameter("@id", SqlDbType.VarChar);
             parameter[0].Value = studentId;
-            return DAO.GetDataBySql(sql, parameter).Rows[0][0].ToString() == "0" ? 0 : 1;
+            return Convert.ToInt32(DAO.GetDataBySql(sql, parameter).Rows[0][0].ToString());
         }
         public static int DeleteStudent(String id)
         {
