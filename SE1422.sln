@@ -25,9 +25,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LAB2", "LAB2\LAB2.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FIrstWebApp", "FIrstWebApp\FIrstWebApp.csproj", "{2391B8CC-1743-4899-B0FE-1AAB412DC9AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoMVCWebApp", "DemoMVCWebApp\DemoMVCWebApp.csproj", "{CD09092A-DFFF-46B3-9CE1-A8D3F5BA6901}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoMVCWebApp", "DemoMVCWebApp\DemoMVCWebApp.csproj", "{CD09092A-DFFF-46B3-9CE1-A8D3F5BA6901}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoFirstStudent", "DemoFirstStudent\DemoFirstStudent.csproj", "{AEA83C57-6E41-4E5F-A3C6-8D4ED37B187D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoFirstStudent", "DemoFirstStudent\DemoFirstStudent.csproj", "{AEA83C57-6E41-4E5F-A3C6-8D4ED37B187D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CourseManagement", "CourseManagement\CourseManagement.csproj", "{CEB3B4DE-553B-4E69-B8CF-EE91FDA30249}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{AEA83C57-6E41-4E5F-A3C6-8D4ED37B187D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AEA83C57-6E41-4E5F-A3C6-8D4ED37B187D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AEA83C57-6E41-4E5F-A3C6-8D4ED37B187D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEB3B4DE-553B-4E69-B8CF-EE91FDA30249}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEB3B4DE-553B-4E69-B8CF-EE91FDA30249}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEB3B4DE-553B-4E69-B8CF-EE91FDA30249}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEB3B4DE-553B-4E69-B8CF-EE91FDA30249}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
