@@ -55,7 +55,7 @@
                                     @foreach (Subject s in ViewBag.subjects)
                                     {
                                         <option value="/Course/List/@s.SubjectId" @(s.SubjectId == ViewBag.subjectId ?
-                                            "selected":"")>@s.SubjectName</option>
+                                            "selected":"")>@s.SubjectName - @s.Courses.Count</option>
                                     }
                                 </select>
                             </div>

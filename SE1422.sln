@@ -29,7 +29,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoMVCWebApp", "DemoMVCWeb
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoFirstStudent", "DemoFirstStudent\DemoFirstStudent.csproj", "{AEA83C57-6E41-4E5F-A3C6-8D4ED37B187D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CourseManagement", "CourseManagement\CourseManagement.csproj", "{CEB3B4DE-553B-4E69-B8CF-EE91FDA30249}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CourseManagement", "CourseManagement\CourseManagement.csproj", "{CEB3B4DE-553B-4E69-B8CF-EE91FDA30249}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LAB3Northwind", "LAB3Northwind\LAB3Northwind.csproj", "{F40AF7EF-A880-4ED2-B587-E7B65CDA0EC7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UsingIdentity", "UsingIdentity\UsingIdentity.csproj", "{31AC3B40-596C-44E1-9FFE-DF177D3C1820}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +97,14 @@ Global
 		{CEB3B4DE-553B-4E69-B8CF-EE91FDA30249}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CEB3B4DE-553B-4E69-B8CF-EE91FDA30249}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CEB3B4DE-553B-4E69-B8CF-EE91FDA30249}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F40AF7EF-A880-4ED2-B587-E7B65CDA0EC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F40AF7EF-A880-4ED2-B587-E7B65CDA0EC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F40AF7EF-A880-4ED2-B587-E7B65CDA0EC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F40AF7EF-A880-4ED2-B587-E7B65CDA0EC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31AC3B40-596C-44E1-9FFE-DF177D3C1820}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31AC3B40-596C-44E1-9FFE-DF177D3C1820}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31AC3B40-596C-44E1-9FFE-DF177D3C1820}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31AC3B40-596C-44E1-9FFE-DF177D3C1820}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

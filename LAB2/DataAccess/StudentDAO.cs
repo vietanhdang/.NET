@@ -104,10 +104,11 @@ namespace LAB2.DataAccess
         }
         public static int CheckStudentExit(String studentId)
         {
-            String sql = "select count(*) from student where Id = @id";
+            string sql = "select count(*) from student where Id = @id";
             SqlParameter[] parameter = new SqlParameter[1];
             parameter[0] = new SqlParameter("@id", SqlDbType.VarChar);
             parameter[0].Value = studentId;
+          
             return Convert.ToInt32(DAO.GetDataBySql(sql, parameter).Rows[0][0].ToString());
         }
         public static int DeleteStudent(String id)

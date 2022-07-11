@@ -28,6 +28,7 @@ namespace CourseManagement.Controllers
                     courses = context.Courses.Where(c => c.SubjectId == Id).ToList();
                     subjectName = subjects.FirstOrDefault(x => x.SubjectId == Id).SubjectName;
                 }
+
             }
             ViewData["Id"] = Id;
             ViewData["subjects"] = subjects;
@@ -64,7 +65,7 @@ namespace CourseManagement.Controllers
                 _ = context.Campuses.FirstOrDefault(x => x.CampusId == course.CampusId);
 
             }
-            return View(course);
+            return RedirectToAction()
         }
 
     }

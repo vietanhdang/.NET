@@ -50,7 +50,7 @@ namespace LAB2
             idBox.Text = student.Id;
             idBox.Enabled = isIdEnable;
             nameBox.Text = student.Name;
-            majorBox1.SelectedItem = student.Major;
+            majorBox1.SelectedItem = student.Major != null ? student.Major : StudentManager.getAllMajors().First();
             femaleRadio.Checked = true;
             if (!String.IsNullOrEmpty(student.Gender) && student.Gender.Equals("Male")) { maleRadio.Checked = true; }
             dateOfBirthBox.Value = student.Dob;
@@ -66,13 +66,15 @@ namespace LAB2
         private Student? GetStudentFromFields()
         {
             Student student = new Student();
+            student.Id = idBox.Text;
             // check if idBox not null and matches regex XX151359
             Regex regex = new Regex(@"^[A-Z]{2}[0-9]{6}$");
             if (String.IsNullOrEmpty(idBox.Text) || !regex.IsMatch(idBox.Text))
             {
                 throw new Exception("Id của sinh viên không hợp lệ (XX151359)");
+                // ném ngoại lệ 
             }
-            if (StudentDAO.CheckStudentExit(student.Id) != 0)
+            if (StudentDAO.CheckStudentExit(student.Id) != 0 && idBox.Enabled)
             {
                 throw new Exception("Sinh viên đã tồn tại");
             }
@@ -96,6 +98,7 @@ namespace LAB2
             dataGridView1.DataSource = StudentManager.GetAllStudents();
             // find columns in dataGridView1 checked
             List<Major> majors = StudentManager.getAllMajors();
+            femaleRadio.Checked = true;
             majors.Insert(0, new Major("all", "Tất cả"));
             majorBox.DataSource = majors;
             majorBox1.DataSource = StudentManager.getAllMajors();
@@ -122,6 +125,7 @@ namespace LAB2
                 catch (Exception err)
                 {
                     MessageBox.Show(err.Message);
+                    // bắt lỗi ở đây
                 }
             }
             else
@@ -146,6 +150,7 @@ namespace LAB2
                     if (StudentManager.DeleteStudent(id) > 0)
                     {
                         MessageBox.Show("Xóa sinh viên thành công");
+                        LoadDataToFields(new Student(), false);
                         dataGridView1.DataSource = StudentManager.GetAllStudents();
                     }
                     else

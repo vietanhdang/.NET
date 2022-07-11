@@ -32,6 +32,7 @@ namespace CourseManagement.Logics
         {
             using (var context = new APContext())
             {
+                _ = context.Courses.ToList();
                 return context.Subjects.ToList();
             }
         }
